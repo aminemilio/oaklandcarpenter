@@ -1,0 +1,22 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Block admin-only endpoints
+Disallow: /api/submit
+Disallow: /api/listings
+Disallow: /api/cities
+Disallow: /api/services
+
+Sitemap: https://oaklandcarpenter.com/sitemap.xml

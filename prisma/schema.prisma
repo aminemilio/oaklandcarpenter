@@ -1,0 +1,72 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// A published carpenter listing visible on the directory.
+model Listing {
+  id              String   @id @default(cuid())
+  businessName    String
+  slug            String   @unique
+  ownerName       String?
+  city            String
+  county          String
+  region          String
+  services        String // comma-separated service tags
+  primaryService  String
+  description     String
+  phone           String
+  email           String?
+  website         String?
+  address         String?
+  licenseNumber   String?
+  licenseClass    String?
+  licenseStatus   String?
+  yearEstablished Int?
+  rating          Float    @default(0)
+  reviewCount     Int      @default(0)
+  imageUrl        String?
+  featured        Boolean  @default(false)
+  featuredUntil   DateTime?
+  verified        Boolean  @default(false)
+  status          String   @default("published") // published | pending | rejected
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([city])
+  @@index([region])
+  @@index([primaryService])
+  @@index([featured])
+  @@index([status])
+}
+
+// Pending submissions from carpenters using the public form.
+model Submission {
+  id              String   @id @default(cuid())
+  businessName    String
+  ownerName       String?
+  city            String
+  county          String?
+  services        String
+  primaryService  String
+  description     String?
+  phone           String
+  email           String
+  website         String?
+  address         String?
+  licenseNumber   String?
+  licenseClass    String?
+  yearEstablished Int?
+  status          String   @default("pending") // pending | approved | rejected
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([status])
+}

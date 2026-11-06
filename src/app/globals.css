@@ -1,0 +1,255 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/*
+ * Oakland Carpenter — California Carpentry Directory
+ * Refined palette: deep espresso + cream + amber accent.
+ * Inspired by editorial directory sites (Houzz, Dwell, ArchDaily) — warm but
+ * restrained, photography-forward, amber used as accent not dominant.
+ */
+:root {
+  --radius: 0.75rem;
+
+  /* Cream paper background — slightly off-white, not pure white */
+  --background: oklch(0.985 0.006 75);
+  /* Deep espresso foreground — softer than pure black, warmer than zinc */
+  --foreground: oklch(0.22 0.018 50);
+
+  --card: oklch(1 0.004 75);
+  --card-foreground: oklch(0.22 0.018 50);
+
+  --popover: oklch(1 0.004 75);
+  --popover-foreground: oklch(0.22 0.018 50);
+
+  /* Primary: refined amber-700 (slightly less saturated than before) */
+  --primary: oklch(0.50 0.13 55);
+  --primary-foreground: oklch(0.99 0.005 75);
+
+  /* Secondary: light warm cream */
+  --secondary: oklch(0.96 0.012 75);
+  --secondary-foreground: oklch(0.30 0.025 55);
+
+  --muted: oklch(0.96 0.008 75);
+  --muted-foreground: oklch(0.50 0.02 60);
+
+  /* Accent: light amber tint for hover backgrounds */
+  --accent: oklch(0.93 0.035 75);
+  --accent-foreground: oklch(0.30 0.05 55);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  /* Warm border — softer than gray */
+  --border: oklch(0.91 0.012 70);
+  --input: oklch(0.91 0.012 70);
+  --ring: oklch(0.50 0.13 55);
+
+  /* Chart palette — warm earth tones */
+  --chart-1: oklch(0.50 0.13 55);
+  --chart-2: oklch(0.62 0.10 145);
+  --chart-3: oklch(0.48 0.06 60);
+  --chart-4: oklch(0.78 0.16 75);
+  --chart-5: oklch(0.42 0.10 35);
+
+  --sidebar: oklch(0.97 0.008 75);
+  --sidebar-foreground: oklch(0.22 0.018 50);
+  --sidebar-primary: oklch(0.50 0.13 55);
+  --sidebar-primary-foreground: oklch(0.99 0.005 75);
+  --sidebar-accent: oklch(0.93 0.035 75);
+  --sidebar-accent-foreground: oklch(0.30 0.05 55);
+  --sidebar-border: oklch(0.91 0.012 70);
+  --sidebar-ring: oklch(0.50 0.13 55);
+
+  /* Custom directory tokens */
+  --espresso: oklch(0.22 0.018 50);     /* deep dark brown for contrast text */
+  --espresso-deep: oklch(0.16 0.020 50); /* even darker for hero overlays */
+  --cream: oklch(0.97 0.012 80);
+  --paper: oklch(0.99 0.005 75);
+  --amber-accent: oklch(0.72 0.16 65);   /* brighter amber for highlights */
+}
+
+.dark {
+  --background: oklch(0.18 0.012 50);
+  --foreground: oklch(0.96 0.008 75);
+  --card: oklch(0.22 0.014 50);
+  --card-foreground: oklch(0.96 0.008 75);
+  --popover: oklch(0.22 0.014 50);
+  --popover-foreground: oklch(0.96 0.008 75);
+  --primary: oklch(0.78 0.14 65);
+  --primary-foreground: oklch(0.18 0.012 50);
+  --secondary: oklch(0.28 0.02 55);
+  --secondary-foreground: oklch(0.96 0.008 75);
+  --muted: oklch(0.28 0.02 55);
+  --muted-foreground: oklch(0.72 0.012 65);
+  --accent: oklch(0.32 0.04 55);
+  --accent-foreground: oklch(0.96 0.008 75);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.78 0.14 65);
+  --chart-1: oklch(0.78 0.14 65);
+  --chart-2: oklch(0.70 0.10 145);
+  --chart-3: oklch(0.60 0.06 60);
+  --chart-4: oklch(0.82 0.16 75);
+  --chart-5: oklch(0.55 0.10 35);
+  --sidebar: oklch(0.22 0.014 50);
+  --sidebar-foreground: oklch(0.96 0.008 75);
+  --sidebar-primary: oklch(0.78 0.14 65);
+  --sidebar-primary-foreground: oklch(0.18 0.012 50);
+  --sidebar-accent: oklch(0.32 0.04 55);
+  --sidebar-accent-foreground: oklch(0.96 0.008 75);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.78 0.14 65);
+  --espresso: oklch(0.95 0.008 75);
+  --espresso-deep: oklch(0.99 0.005 75);
+  --cream: oklch(0.22 0.014 55);
+  --paper: oklch(0.20 0.014 50);
+  --amber-accent: oklch(0.78 0.14 65);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
+  }
+  /* Stronger typographic hierarchy via weight + tracking, not font family swap */
+  h1 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  h3 {
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  h4 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Unlayered font-family declaration — beats Tailwind Preflight's layered rule.
+ * next/font sets --font-jakarta on <body> via the variable class. */
+html, body {
+  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+}
+
+/* Glass UI primitives — backdrop blur with subtle warm tint */
+@layer components {
+  .glass {
+    background: oklch(1 0.005 75 / 0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid oklch(1 0 0 / 0.4);
+  }
+  .glass-dark {
+    background: oklch(0.16 0.020 50 / 0.6);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid oklch(1 0 0 / 0.08);
+  }
+  .glass-card {
+    background: oklch(1 0.005 75 / 0.88);
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    border: 1px solid oklch(1 0 0 / 0.5);
+  }
+}
+
+/* Smooth scroll for in-page anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Refined scrollbar — espresso-on-cream */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.50 0.08 60);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--espresso);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle text-balance for headings */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Image hover zoom utility for cards */
+.img-zoom {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .img-zoom {
+  transform: scale(1.05);
+}
+
+/* Display utility kept for backward compat (now just sans) */
+.font-display {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}

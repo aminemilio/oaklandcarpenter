@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home + key views -->
+  <url>
+    <loc>https://oaklandcarpenter.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://oaklandcarpenter.com/?view=browse</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://oaklandcarpenter.com/?view=submit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oaklandcarpenter.com/?view=resources</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oaklandcarpenter.com/?view=about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- City pages -->
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Oakland</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=San+Francisco</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=San+Jose</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Fremont</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Sacramento</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Stockton</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Fresno</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Bakersfield</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Los+Angeles</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=San+Diego</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Long+Beach</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Anaheim</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Santa+Ana</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Riverside</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=city&amp;city=Irvine</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Service browse pages -->
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Custom+Cabinets</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Deck+Building</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Framing</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Finish+Carpentry</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Door+%26+Window+Installation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Furniture+Making</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Trim+%26+Molding</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Wood+Flooring</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=Cabinet+Repair</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=browse&amp;service=General+Carpentry</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- SEO articles / guides -->
+  <url><loc>https://oaklandcarpenter.com/?view=article&amp;slug=how-to-hire-carpenter-california</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=article&amp;slug=custom-cabinets-cost-california</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=article&amp;slug=deck-building-permit-california</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oaklandcarpenter.com/?view=article&amp;slug=california-contractor-license-classes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
