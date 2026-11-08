@@ -142,6 +142,7 @@ export function SiteFooter() {
               <li><Link href={`/${buildQuery({ view: "article", slug: "deck-building-permit-california" })}`} className="text-muted-foreground hover:text-primary transition-colors">Deck permit guide</Link></li>
               <li><Link href={`/${buildQuery({ view: "article", slug: "california-contractor-license-classes" })}`} className="text-muted-foreground hover:text-primary transition-colors">License classes explained</Link></li>
               <li><Link href={`/${buildQuery({ view: "about" })}`} className="text-muted-foreground hover:text-primary transition-colors">About the directory</Link></li>
+              <li><Link href={`/${buildQuery({ view: "download" })}`} className="text-muted-foreground hover:text-primary transition-colors">Download source code</Link></li>
               <li><a href="https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Verify a CSLB license ↗</a></li>
             </ul>
           </div>
@@ -152,10 +153,11 @@ export function SiteFooter() {
           <p className="text-xs text-muted-foreground">
             © {year} Oakland Carpenter. Independent directory. Not affiliated with the California Contractors State License Board.
           </p>
-          <div className="flex items-center gap-4 text-xs text-muted-foreground">
-            <Link href={`/${buildQuery({ view: "about" })}`} className="hover:text-primary">Privacy</Link>
-            <Link href={`/${buildQuery({ view: "about" })}`} className="hover:text-primary">Terms</Link>
-            <Link href={`/${buildQuery({ view: "about" })}`} className="hover:text-primary">Verification policy</Link>
+          <div className="flex items-center gap-4 text-xs text-muted-foreground flex-wrap">
+            <Link href={`/${buildQuery({ view: "privacy" })}`} className="hover:text-primary">Privacy Policy</Link>
+            <Link href={`/${buildQuery({ view: "terms" })}`} className="hover:text-primary">Terms of Service</Link>
+            <Link href={`/${buildQuery({ view: "contact" })}`} className="hover:text-primary">Contact</Link>
+            <Link href={`/${buildQuery({ view: "download" })}`} className="hover:text-primary">Source code</Link>
           </div>
         </div>
 

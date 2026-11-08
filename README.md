@@ -19,14 +19,43 @@ Built for free hosting on Vercel (with PostgreSQL switch — see below).
 
 ## ⚠️ Read this before launching
 
-**The seed data in `scripts/seed.ts` is SAMPLE / DEMO data.** The 41 carpenter listings are fictional — invented business names, fake phone numbers (with real California area codes), `.example.com` email addresses, and unverified license numbers.
+**The sample data has been cleared.** The database is now empty — ready for real listings.
 
-**Do NOT launch to the public with this data.** Homeowners calling these numbers won't reach real carpenters, and some license numbers may accidentally match real CSLB-licensed businesses that didn't consent to being listed.
+### How to get REAL carpenter listings
 
-Before launching to production:
-1. Run `bun run scripts/clear-data.ts` to wipe all sample data
-2. Either start empty (the site shows a clean "no carpenters yet, list your business" state) OR
-3. Manually source real listings from the public CSLB database at [cslb.ca.gov/CheckALicense](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx) — only add businesses that have explicitly opted in
+You have three options:
+
+**Option A — Let carpenters submit themselves (recommended)**
+1. Launch the site empty
+2. Market it to California carpenters (Facebook groups, Reddit, trade associations)
+3. Carpenters find the site, submit through the form at `/?view=submit`
+4. You approve them in the admin dashboard at `/admin`
+5. Each approved submission becomes a live listing
+
+**Option B — Manually add real listings from the CSLB database**
+1. Go to https://www.cslb.ca.gov/FindAContractor (Find a Licensed Contractor tool)
+2. Search by city (e.g., "Oakland") and license class (B = General Building, C-6 = Cabinet & Millwork)
+3. The CSLB tool shows: business name, license number, status, phone, address
+4. Contact each carpenter to get consent and gather missing info (email, website, services, description)
+5. Add them via the CSV import script (see below) or the admin dashboard
+
+**Option C — CSV bulk import**
+1. Collect real carpenter data in `scripts/listings.csv` (template included)
+2. Run: `bun run scripts/import-csv.ts`
+3. The script imports all listings, skipping duplicates
+
+### CSV import format
+The `scripts/listings.csv` file uses this header:
+```
+businessName,ownerName,city,county,region,primaryService,services,description,phone,email,website,address,licenseNumber,licenseClass,licenseStatus,yearEstablished,rating,reviewCount,featured,verified
+```
+
+Example row:
+```
+"Smith Carpentry",,Oakland,Alameda,Bay Area,General Carpentry,"General Carpentry, Framing, Deck Building","Licensed Class B contractor serving Oakland since 2005.",(510) 555-1234,smith@example.com,https://smithcarpentry.com,123 Main St Oakland CA,1024587,B,Active,2005,4.8,23,false,false
+```
+
+**Important:** Only list businesses that have consented. Do NOT scrape the CSLB database and publish listings without the carpenter's knowledge. If a business requests removal, you must honor it (per the Terms of Service).
 
 ---
 

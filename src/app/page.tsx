@@ -13,6 +13,10 @@ import { SubmitView } from "@/components/directory/views/submit-view";
 import { AboutView } from "@/components/directory/views/about-view";
 import { ResourcesView } from "@/components/directory/views/resources-view";
 import { ArticleView } from "@/components/directory/views/article-view";
+import { DownloadView } from "@/components/directory/views/download-view";
+import { PrivacyView } from "@/components/directory/views/privacy-view";
+import { TermsView } from "@/components/directory/views/terms-view";
+import { ContactView } from "@/components/directory/views/contact-view";
 
 function Routed() {
   const sp = useSearchParams();
@@ -46,6 +50,18 @@ function Routed() {
       break;
     case "about":
       content = <AboutView />;
+      break;
+    case "download":
+      content = <DownloadView />;
+      break;
+    case "privacy":
+      content = <PrivacyView />;
+      break;
+    case "terms":
+      content = <TermsView />;
+      break;
+    case "contact":
+      content = <ContactView />;
       break;
     case "home":
     default:
